@@ -28,7 +28,7 @@ TriggerEvent('es:addCommand', command, function(source, args, user)
             if (text ~= nil) then
                 TriggerClientEvent('chat:addMessage', -1, {
                     template = '<div style="padding: 0.5vw; margin: 0.5vw; background: -webkit-linear-gradient(right, transparent 15%, rgba(5, 5, 5, 0.4) 85%); border-radius: 7px;"><i class="fa fa-user"></i> {0}:  {1}</div>',
-                    args = {"["..text.."]:", table.concat(rgs, " ")}
+                    args = {"["..text.."]:", table.concat(args, " ")}
                 })
             else
                 Wait(1000)
@@ -40,7 +40,7 @@ TriggerEvent('es:addCommand', command, function(source, args, user)
         if (text ~= nil) then
             TriggerClientEvent('chat:addMessage', -1, {
                 template = '<div style="padding: 0.5vw; margin: 0.5vw; background: -webkit-linear-gradient(right, transparent 15%, rgba(5, 5, 5, 0.4) 85%); border-radius: 7px;"><i class="fa fa-user"></i> {0}:  {1}</div>',
-                args = {"["..text.."]:", table.concat(rgs, " ")}
+                args = {"["..text.."]:", table.concat(srgs, " ")}
             })
         else
             Wait(1000)
