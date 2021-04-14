@@ -23,9 +23,9 @@ TriggerEvent('es:addCommand', command, function(source, args, user)
     else
         Wait(1000)
     end
-    if enablephone then
-        if xPlayer.getInventoryItem('phone').count >= 1 then
-            if text ~= nil then
+    if (enablephone) then
+        if (xPlayer.getInventoryItem('phone').count >= 1) then
+            if (text ~= nil) then
                 TriggerClientEvent('chat:addMessage', -1, {
                     template = '<div style="padding: 0.5vw; margin: 0.5vw; background: -webkit-linear-gradient(right, transparent 15%, rgba(5, 5, 5, 0.4) 85%); border-radius: 7px;"><i class="fa fa-user"></i> {0}:  {1}</div>',
                     args = {"["..text.."]:", table.concat(rgs, " ")}
@@ -37,7 +37,7 @@ TriggerEvent('es:addCommand', command, function(source, args, user)
             Wait(1000)
         end
     else
-        if text ~= nil then
+        if (text ~= nil) then
             TriggerClientEvent('chat:addMessage', -1, {
                 template = '<div style="padding: 0.5vw; margin: 0.5vw; background: -webkit-linear-gradient(right, transparent 15%, rgba(5, 5, 5, 0.4) 85%); border-radius: 7px;"><i class="fa fa-user"></i> {0}:  {1}</div>',
                 args = {"["..text.."]:", table.concat(rgs, " ")}
