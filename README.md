@@ -1,4 +1,4 @@
-# esx_jobannouncements
+# esx_e_jobannouncements
 - Desc.
 
    Adds /ptwt command for jobs to announce stuff.
